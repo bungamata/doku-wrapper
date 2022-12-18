@@ -1,11 +1,11 @@
 {
   "name": "bungamata/doku-wrapper",
   "type": "library",
-  "license": "apache-2.0",
+  "license": "MIT",
   "description": "A simple wrapper for the Doku implementation",
   "prefer-stable": true,
   "require": {
-    "php": ">=7.1",
+    "php": ">=7.3",
     "ext-json": "*",
     "guzzlehttp/guzzle": "^7.5",
     "psr/log": "^3.0",
@@ -19,7 +19,8 @@
   "scripts": {
     "lint": [
       "vendor/bin/phpcs -p",
-      "vendor/bin/phpstan analyse"
+      "vendor/bin/phpstan analyse --memory-limit=-1",
+      "vendor/bin/phpunit --testdox"
     ]
   },
   "config": {
