@@ -1,0 +1,38 @@
+{
+  "name": "bungamata/doku-wrapper",
+  "type": "library",
+  "license": "apache-2.0",
+  "description": "A simple wrapper for the Doku implementation",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.1",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.5",
+    "psr/log": "^3.0",
+    "symfony/http-foundation": "^6.2"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.9",
+    "phpunit/phpunit": "^9.0",
+    "squizlabs/php_codesniffer": "^3.7"
+  },
+  "scripts": {
+    "lint": [
+      "vendor/bin/phpcs -p",
+      "vendor/bin/phpstan analyse"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "BungaMata\\DokuWrapper\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BungaMata\\DokuWrapperTest\\": "test/"
+    }
+  }
+}
